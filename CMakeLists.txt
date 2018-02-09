@@ -73,7 +73,7 @@ if(${OpenCV_VERSION_MAJOR} STREQUAL 3)
   message(WARNING "Nonfree module disabled, demo application with limited functionality")
 endif()
 
-if(NOT APPLE)
+if(NOT APPLE AND NOT MSVC)
   # The clang compiler (on osx) is somehow much more strict
   # than the compilers on ubuntu and so this does not seem
   # possible on OSX just yet.

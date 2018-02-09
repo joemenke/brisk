@@ -10,7 +10,7 @@ endif()
 find_package( OpenCV REQUIRED )
 include_directories(${OpenCV_INCLUDE_DIRS}) 
 
-if(APPLE)
+if(APPLE OR MSVC)
   add_definitions(-Wall -pedantic -DHAVE_OPENCV -DAGAST_GLOG -std=c++11)
 else()
   add_definitions(-Wall -Werror -pedantic -DHAVE_OPENCV -DAGAST_GLOG -std=c++0x)
